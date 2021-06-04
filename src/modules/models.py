@@ -108,6 +108,15 @@ class LSTMExtractor(nn.LSTM):
         out, _ = super().forward(*inputs)
         return out
 
+class TransformerExtractor(nn.TransformerEncoder):
+    def __init__(self, num_head=8, num_feature=1024):
+        encoder_layer = nn.TransformerEncoderLayer(d_model=num_feature, nhead=num_head, dim_feedforward=num_feature)
+        super().__init__(encoder_layer, num_layers=6)
+    
+    def forward(self, *inputs):
+        out = super().forward(*inputs)
+        return out
+
 
 def build_base_model(base_type: str,
                      num_feature: int,
@@ -124,6 +133,8 @@ def build_base_model(base_type: str,
         base_model = GCNExtractor(num_feature)
     elif base_type == 'attention':
         base_model = AttentionExtractor(num_head, num_feature)
+    elif base_type == 'transformer':
+        base_model = TransformerExtractor(num_head, num_feature)
     else:
         raise ValueError(f'Invalid base model {base_type}')
 

@@ -51,7 +51,7 @@ def get_parser() -> argparse.ArgumentParser:
     # common model config
     parser.add_argument('--base-model', type=str, default='attention',
                         choices=['attention', 'lstm', 'linear', 'bilstm',
-                                 'gcn'])
+                                 'gcn', 'transformer'])
     parser.add_argument('--num-head', type=int, default=8)
     parser.add_argument('--num-feature', type=int, default=1024)
     parser.add_argument('--num-hidden', type=int, default=128)
