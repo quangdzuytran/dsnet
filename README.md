@@ -15,9 +15,10 @@ Trained models are available at [https://drive.google.com/drive/folders/1G4M7HWX
 First you have to have the original video of the dataset, most of the used datasets are preprocessed under the file .h5, so check out this link of Vsumm dataset (the original of OVP and Youtube dataset): https://sites.google.com/site/vsummsite/download
 
 To run the export module,  you could use the ovp dataset instead of youtube dataset, NumOfVideo is for the index of the video, you want to test, the result of the file is the original filename append with ".export_demo":
-```
+
+~~~
 !python export_demo_shots.py --dataset '../datasets/eccv16_dataset_youtube_google_pool5.h5' --video-number video_#NumOfVideo
-```
+~~~
 
 Then create the yaml file for the above eccv16_dataset_youtube_google_pool5.h5.export_demo
 ```
