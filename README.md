@@ -16,23 +16,23 @@ First you have to have the original video of the dataset, most of the used datas
 
 To run the export module,  you could use the ovp dataset instead of youtube dataset, NumOfVideo is for the index of the video, you want to test, the result of the file is the original filename append with ".export_demo":
 
-~~~
-!python export_demo_shots.py --dataset '../datasets/eccv16_dataset_youtube_google_pool5.h5' --video-number video_#NumOfVideo
-~~~
+```
+python export_demo_shots.py --dataset '../datasets/eccv16_dataset_youtube_google_pool5.h5' --video-number video_#NumOfVideo
+```
 
 Then create the yaml file for the above eccv16_dataset_youtube_google_pool5.h5.export_demo
 ```
-!python make_split.py --dataset ../datasets/eccv16_dataset_youtube_google_pool5.h5.export_demo --save-path ../splits/testYT.yml --num-splits 1 --train-ratio 0
+python make_split.py --dataset ../datasets/eccv16_dataset_youtube_google_pool5.h5.export_demo --save-path ../splits/testYT.yml --num-splits 1 --train-ratio 0
 ```
 
 Run these two lines to create video for the video with the anchor-based method, the result video will be in the file type of '.avi'
 ```
-!python export_video.py anchor-based --model-dir ../models/ab_basic/ --splits ../splits/testYT.yml --video-path video_#NumOfVideo.avi --output-name output
+python export_video.py anchor-based --model-dir ../models/ab_basic/ --splits ../splits/testYT.yml --video-path video_#NumOfVideo.avi --output-name output
 ```
 
 Or you could export video that used the anchor-free method:
 ```
-!python export_video.py anchor-free --model-dir ../models/af_basic/ --splits ../splits/testYT.yml --video-path video_#NumOfVideo.avi --output-name output --nms-thresh 0.4
+python export_video.py anchor-free --model-dir ../models/af_basic/ --splits ../splits/testYT.yml --video-path video_#NumOfVideo.avi --output-name output --nms-thresh 0.4
 ```
 
 ## Acknowledgments
