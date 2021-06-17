@@ -51,7 +51,7 @@ def get_parser() -> argparse.ArgumentParser:
     # common model config
     parser.add_argument('--base-model', type=str, default='attention',
                         choices=['attention', 'lstm', 'linear', 'bilstm',
-                                 'gcn', 'transformer'])
+                                 'gcn'])
     parser.add_argument('--num-head', type=int, default=8)
     parser.add_argument('--num-feature', type=int, default=1024)
     parser.add_argument('--num-hidden', type=int, default=128)
@@ -71,6 +71,10 @@ def get_parser() -> argparse.ArgumentParser:
                         choices=['focal', 'cross-entropy'])
     parser.add_argument('--reg-loss', type=str, default='soft-iou',
                         choices=['soft-iou', 'smooth-l1'])
+
+    # name file for export video
+    parser.add_argument('--video-path', type=str, default='')
+    parser.add_argument('--output-name', type=str, default='')
 
     return parser
 
