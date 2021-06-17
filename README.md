@@ -4,11 +4,14 @@
 - 18120512 - Lê Đặng Thiên Phúc
 
 ## Getting started
+
+Follow the instruction from the author's original github to acquire the dataset https://github.com/li-plus/DSNet
+
+## How to train the model
 If you are using conda, the environment can be installed using the [dsnet_env.yml](https://github.com/quangdzuytran/dsnet/blob/c99ac0be913602d486ddbb549078876b4a2ad9cd/dsnet_env.yml) file.\
 To train and evaluate models, follow the guide from [https://github.com/li-plus/DSNet](https://github.com/li-plus/DSNet). (use ```--base-model transformer``` to use the transformer encoder as base model)\
 Google Colab notebook used to train all models is available at [https://colab.research.google.com/drive/1wPRUsrLR2C3pfIyW2GyUARZIBPSJJlwO?usp=sharing](https://colab.research.google.com/drive/1wPRUsrLR2C3pfIyW2GyUARZIBPSJJlwO?usp=sharing).\
 Trained models are available at [https://drive.google.com/drive/folders/1G4M7HWXvP-1F9O2f2TdEcliJCjB7iHT5?usp=sharing](https://drive.google.com/drive/folders/1G4M7HWXvP-1F9O2f2TdEcliJCjB7iHT5?usp=sharing).
-
 
 ## How to create summarized video for Youtube dataset
 
