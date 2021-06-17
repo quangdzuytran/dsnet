@@ -1,5 +1,5 @@
 # DSNet: A Flexible Detect-to-Summarize Network for Video Summarization
-## Project Team:
+## Project Team
 - 18120022 - Trần Quang Duy
 - 18120512 - Lê Đặng Thiên Phúc
 
